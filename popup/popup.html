@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="extName">Element Modifier Pro</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-title">
+        <h1>🎨 <span data-i18n="headerTitle">Element Modifier Pro</span></h1>
+        <span class="version" data-i18n="version">v1.0.0</span>
+      </div>
+      <label class="toggle-switch" data-i18n-title="toggleGlobal">
+        <input type="checkbox" id="globalToggle" checked>
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <!-- Status da página atual -->
+    <div class="status-bar" id="statusBar">
+      <span class="status-dot"></span>
+      <span class="status-text" data-i18n="loading">Loading...</span>
+    </div>
+
+    <!-- Abas -->
+    <nav class="tabs">
+      <button class="tab active" data-tab="rules" data-i18n="tabRules">Rules</button>
+      <button class="tab" data-tab="editor" data-i18n="tabEditor">Editor</button>
+      <button class="tab" data-tab="settings" data-i18n="tabSettings">Settings</button>
+    </nav>
+
+    <!-- Conteúdo das Abas -->
+    <main class="tab-content">
+      
+      <!-- Aba: Lista de Regras -->
+      <section id="rules-tab" class="tab-panel active">
+        <div class="toolbar">
+          <button id="addRuleBtn" class="btn btn-primary">
+            <span>+</span> <span data-i18n="newRule">New Rule</span>
+          </button>
+          <button id="reprocessBtn" class="btn btn-secondary" data-i18n-title="reapply">
+            ↻ <span data-i18n="reapply">Reapply</span>
+          </button>
+        </div>
+        
+        <div id="rulesList" class="rules-list">
+          <!-- Regras serão inseridas aqui via JavaScript -->
+        </div>
+        
+        <div id="emptyState" class="empty-state" style="display: none;">
+          <p data-i18n="noRules">No rules configured</p>
+          <small data-i18n="noRulesHint">Click "New Rule" to get started</small>
+        </div>
+      </section>
+
+      <!-- Aba: Editor de Regra -->
+      <section id="editor-tab" class="tab-panel">
+        <form id="ruleForm" class="rule-form">
+          <input type="hidden" id="ruleId">
+          
+          <div class="form-group">
+            <label for="ruleName"><span data-i18n="ruleName">Rule Name</span> *</label>
+            <input type="text" id="ruleName" data-i18n-placeholder="ruleNamePlaceholder" placeholder="E.g.: Remove ads" required>
+          </div>
+
+          <div class="form-group">
+            <label for="ruleDescription" data-i18n="description">Description</label>
+            <input type="text" id="ruleDescription" data-i18n-placeholder="descriptionPlaceholder" placeholder="Optional description">
+          </div>
+
+          <div class="form-group">
+            <label for="ruleSelector"><span data-i18n="cssSelector">CSS Selector</span> *</label>
+            <div class="input-with-action">
+              <input type="text" id="ruleSelector" data-i18n-placeholder="cssSelectorPlaceholder" placeholder="E.g.: .ad-banner, #sidebar-ad" required>
+              <button type="button" id="testSelectorBtn" class="btn btn-small" data-i18n="testSelector">
+                Test
+              </button>
+            </div>
+            <small id="selectorResult" class="helper-text"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="ruleUrlPattern" data-i18n="urlPattern">URL Pattern</label>
+            <input type="text" id="ruleUrlPattern" data-i18n-placeholder="urlPatternPlaceholder" placeholder="E.g.: *.example.com or * for all">
+            <small class="helper-text" data-i18n="urlPatternHint">Use * as wildcard. Leave empty or * to apply on all sites.</small>
+          </div>
+
+          <div class="form-section">
+            <h3 data-i18n="modifications">Modifications</h3>
+            
+            <!-- Estilos CSS -->
+            <div class="form-group">
+              <label data-i18n="cssStyles">CSS Styles</label>
+              <small class="helper-text" style="margin-bottom: 6px; display: block;">
+                <span data-i18n="stylesHint">!important is added automatically</span>
+              </small>
+              <div id="stylesContainer" class="key-value-container">
+                <!-- Pares chave-valor serão adicionados aqui -->
+              </div>
+              <button type="button" class="btn btn-small btn-add" data-container="stylesContainer" data-i18n="addStyle">
+                + Add Style
+              </button>
+            </div>
+
+            <!-- Atributos HTML -->
+            <div class="form-group">
+              <label data-i18n="htmlAttributes">HTML Attributes</label>
+              <div id="attributesContainer" class="key-value-container">
+                <!-- Pares chave-valor serão adicionados aqui -->
+              </div>
+              <button type="button" class="btn btn-small btn-add" data-container="attributesContainer" data-i18n="addAttribute">
+                + Add Attribute
+              </button>
+            </div>
+
+            <!-- Classes -->
+            <div class="form-row">
+              <div class="form-group half">
+                <label for="ruleAddClass" data-i18n="addClasses">Add Classes</label>
+                <input type="text" id="ruleAddClass" data-i18n-placeholder="classesPlaceholder" placeholder="class1, class2">
+              </div>
+              <div class="form-group half">
+                <label for="ruleRemoveClass" data-i18n="removeClasses">Remove Classes</label>
+                <input type="text" id="ruleRemoveClass" data-i18n-placeholder="classesPlaceholder" placeholder="class1, class2">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="ruleEnabled" checked>
+              <span data-i18n="ruleEnabled">Rule enabled</span>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" id="cancelEditBtn" class="btn btn-secondary" data-i18n="cancel">Cancel</button>
+            <button type="submit" class="btn btn-primary" data-i18n="saveRule">Save Rule</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Aba: Configurações -->
+      <section id="settings-tab" class="tab-panel">
+        <div class="settings-section">
+          <h3 data-i18n="general">General</h3>
+          
+          <label class="checkbox-label">
+            <input type="checkbox" id="debugMode">
+            <span data-i18n="debugMode">Debug mode (console logs)</span>
+          </label>
+        </div>
+
+        <div class="settings-section">
+          <h3 data-i18n="data">Data</h3>
+          
+          <div class="button-group">
+            <button id="exportBtn" class="btn btn-secondary">
+              📤 <span data-i18n="exportRules">Export Rules</span>
+            </button>
+            <button id="importBtn" class="btn btn-secondary">
+              📥 <span data-i18n="importRules">Import Rules</span>
+            </button>
+          </div>
+          
+          <input type="file" id="importFile" accept=".json" style="display: none;">
+          
+          <div class="danger-zone">
+            <h4 data-i18n="dangerZone">Danger Zone</h4>
+            <button id="clearAllBtn" class="btn btn-danger">
+              🗑️ <span data-i18n="clearAllRules">Clear All Rules</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="settings-section">
+          <h3 data-i18n="about">About</h3>
+          <p class="about-text" data-i18n="aboutText">
+            Element Modifier Pro allows you to modify HTML elements on any website.
+            Your settings are synced across devices via your Google account.
+          </p>
+          <p class="storage-info" id="storageInfo" data-i18n="storageUsage">
+            Loading storage usage...
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

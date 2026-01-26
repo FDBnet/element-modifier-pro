@@ -1,0 +1,294 @@
+{
+  "extName": {
+    "message": "Element Modifier Pro",
+    "description": "שם התוסף"
+  },
+  "extDescription": {
+    "message": "שנה תכונות, סגנונות ומאפיינים של אלמנטי HTML בכל אתר",
+    "description": "תיאור התוסף"
+  },
+  "headerTitle": {
+    "message": "Element Modifier Pro",
+    "description": "כותרת בחלק העליון של הפופאפ"
+  },
+  "version": {
+    "message": "v1.0.0",
+    "description": "מספר גרסה"
+  },
+  "loading": {
+    "message": "טוען...",
+    "description": "מצב טעינה"
+  },
+  "pageNotSupported": {
+    "message": "דף לא נתמך",
+    "description": "כאשר התוסף לא יכול לרוץ בדף הנוכחי"
+  },
+  "extensionNotLoaded": {
+    "message": "התוסף לא נטען בדף זה",
+    "description": "כאשר הסקריפט לא הוזרק"
+  },
+  "rulesActive": {
+    "message": "$COUNT$ כלל(ים) פעיל(ים) בדף זה",
+    "description": "מספר הכללים הפעילים",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "tabRules": {
+    "message": "כללים",
+    "description": "לשונית כללים"
+  },
+  "tabEditor": {
+    "message": "עורך",
+    "description": "לשונית עורך"
+  },
+  "tabSettings": {
+    "message": "הגדרות",
+    "description": "לשונית הגדרות"
+  },
+  "newRule": {
+    "message": "כלל חדש",
+    "description": "כפתור כלל חדש"
+  },
+  "reapply": {
+    "message": "החל מחדש",
+    "description": "כפתור החל מחדש"
+  },
+  "noRules": {
+    "message": "אין כללים מוגדרים",
+    "description": "כותרת מצב ריק"
+  },
+  "noRulesHint": {
+    "message": "לחץ על \"כלל חדש\" כדי להתחיל",
+    "description": "רמז במצב ריק"
+  },
+  "ruleName": {
+    "message": "שם הכלל",
+    "description": "תווית שדה השם"
+  },
+  "ruleNamePlaceholder": {
+    "message": "לדוגמה: הסר פרסומות",
+    "description": "מציין מיקום לשם"
+  },
+  "description": {
+    "message": "תיאור",
+    "description": "תווית שדה התיאור"
+  },
+  "descriptionPlaceholder": {
+    "message": "תיאור אופציונלי",
+    "description": "מציין מיקום לתיאור"
+  },
+  "cssSelector": {
+    "message": "בורר CSS",
+    "description": "תווית שדה הבורר"
+  },
+  "cssSelectorPlaceholder": {
+    "message": "לדוגמה: .ad-banner, #sidebar-ad",
+    "description": "מציין מיקום לבורר"
+  },
+  "testSelector": {
+    "message": "בדוק",
+    "description": "כפתור בדיקת בורר"
+  },
+  "urlPattern": {
+    "message": "תבנית URL",
+    "description": "תווית שדה URL"
+  },
+  "urlPatternPlaceholder": {
+    "message": "לדוגמה: *.example.com או * לכולם",
+    "description": "מציין מיקום לתבנית URL"
+  },
+  "urlPatternHint": {
+    "message": "השתמש ב-* כתו כללי. השאר ריק או * כדי להחיל על כל האתרים.",
+    "description": "טקסט עזרה לתבנית URL"
+  },
+  "modifications": {
+    "message": "שינויים",
+    "description": "כותרת קטע השינויים"
+  },
+  "cssStyles": {
+    "message": "סגנונות CSS",
+    "description": "קטע סגנונות CSS"
+  },
+  "stylesHint": {
+    "message": "!important מתווסף אוטומטית. אל תקליד : או ;",
+    "description": "רמז לקלט סגנונות"
+  },
+  "htmlAttributes": {
+    "message": "תכונות HTML",
+    "description": "קטע תכונות HTML"
+  },
+  "addStyle": {
+    "message": "+ הוסף סגנון",
+    "description": "כפתור הוספת סגנון"
+  },
+  "addAttribute": {
+    "message": "+ הוסף תכונה",
+    "description": "כפתור הוספת תכונה"
+  },
+  "property": {
+    "message": "מאפיין",
+    "description": "מציין מיקום לקלט מאפיין"
+  },
+  "value": {
+    "message": "ערך",
+    "description": "מציין מיקום לקלט ערך"
+  },
+  "addClasses": {
+    "message": "הוסף מחלקות",
+    "description": "תווית שדה הוספת מחלקות"
+  },
+  "removeClasses": {
+    "message": "הסר מחלקות",
+    "description": "תווית שדה הסרת מחלקות"
+  },
+  "classesPlaceholder": {
+    "message": "class1, class2",
+    "description": "מציין מיקום למחלקות"
+  },
+  "ruleEnabled": {
+    "message": "כלל מופעל",
+    "description": "תיבת סימון כלל מופעל"
+  },
+  "cancel": {
+    "message": "ביטול",
+    "description": "כפתור ביטול"
+  },
+  "saveRule": {
+    "message": "שמור כלל",
+    "description": "כפתור שמירת כלל"
+  },
+  "general": {
+    "message": "כללי",
+    "description": "קטע הגדרות כלליות"
+  },
+  "debugMode": {
+    "message": "מצב דיבאג (לוגים בקונסול)",
+    "description": "תיבת סימון מצב דיבאג"
+  },
+  "data": {
+    "message": "נתונים",
+    "description": "קטע הגדרות נתונים"
+  },
+  "exportRules": {
+    "message": "ייצא כללים",
+    "description": "כפתור ייצוא"
+  },
+  "importRules": {
+    "message": "ייבא כללים",
+    "description": "כפתור ייבוא"
+  },
+  "dangerZone": {
+    "message": "אזור סכנה",
+    "description": "כותרת אזור סכנה"
+  },
+  "clearAllRules": {
+    "message": "מחק את כל הכללים",
+    "description": "כפתור מחיקת הכל"
+  },
+  "about": {
+    "message": "אודות",
+    "description": "קטע אודות"
+  },
+  "aboutText": {
+    "message": "Element Modifier Pro מאפשר לך לשנות אלמנטי HTML בכל אתר. ההגדרות שלך מסונכרנות בין מכשירים דרך חשבון Google שלך.",
+    "description": "תיאור אודות"
+  },
+  "storageUsage": {
+    "message": "טוען שימוש באחסון...",
+    "description": "מציין מיקום למידע אחסון"
+  },
+  "storage": {
+    "message": "אחסון",
+    "description": "תווית אחסון"
+  },
+  "edit": {
+    "message": "ערוך",
+    "description": "טולטיפ כפתור עריכה"
+  },
+  "duplicate": {
+    "message": "שכפל",
+    "description": "טולטיפ כפתור שכפול"
+  },
+  "delete": {
+    "message": "מחק",
+    "description": "טולטיפ כפתור מחיקה"
+  },
+  "confirmDelete": {
+    "message": "האם אתה בטוח שברצונך למחוק כלל זה?",
+    "description": "אישור מחיקה"
+  },
+  "confirmClearAll": {
+    "message": "האם אתה בטוח שברצונך למחוק את כל הכללים? פעולה זו לא ניתנת לביטול.",
+    "description": "אישור מחיקת הכל"
+  },
+  "confirmImport": {
+    "message": "לייבא $COUNT$ כלל(ים)? הם יתווספו לכללים הקיימים.",
+    "description": "אישור ייבוא",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "importSuccess": {
+    "message": "$COUNT$ כלל(ים) יובאו בהצלחה!",
+    "description": "הודעת הצלחת ייבוא",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "importError": {
+    "message": "שגיאה בייבוא",
+    "description": "קידומת שגיאת ייבוא"
+  },
+  "invalidFileFormat": {
+    "message": "פורמט קובץ לא תקין",
+    "description": "קובץ ייבוא לא תקין"
+  },
+  "selectorInvalid": {
+    "message": "בורר לא תקין",
+    "description": "שגיאת בורר לא תקין"
+  },
+  "selectorRequired": {
+    "message": "הזן בורר קודם",
+    "description": "הודעת בורר נדרש"
+  },
+  "cannotTestOnPage": {
+    "message": "לא ניתן לבדוק בדף זה",
+    "description": "לא ניתן לבדוק בורר"
+  },
+  "testError": {
+    "message": "שגיאה בבדיקה (התוסף לא נטען)",
+    "description": "הודעת שגיאה בבדיקה"
+  },
+  "elementsFound": {
+    "message": "נמצאו $COUNT$ אלמנט(ים)",
+    "description": "הודעת אלמנטים שנמצאו",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "requiredFields": {
+    "message": "שם ובורר הם שדות חובה!",
+    "description": "שגיאת שדות חובה"
+  },
+  "saveError": {
+    "message": "שגיאה בשמירת הכלל",
+    "description": "קידומת שגיאת שמירה"
+  },
+  "copy": {
+    "message": "(עותק)",
+    "description": "סיומת לכללים משוכפלים"
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "extName": {
+    "message": "Element Modifier Pro",
+    "description": "Extension name"
+  },
+  "extDescription": {
+    "message": "Modify HTML element attributes, styles, and properties on any website",
+    "description": "Extension description"
+  },
+  "headerTitle": {
+    "message": "Element Modifier Pro",
+    "description": "Header title in popup"
+  },
+  "version": {
+    "message": "v1.0.0",
+    "description": "Version number"
+  },
+  "loading": {
+    "message": "Loading...",
+    "description": "Loading state"
+  },
+  "pageNotSupported": {
+    "message": "Page not supported",
+    "description": "When extension can't run on current page"
+  },
+  "extensionNotLoaded": {
+    "message": "Extension not loaded on this page",
+    "description": "When content script isn't injected"
+  },
+  "rulesActive": {
+    "message": "$COUNT$ rule(s) active on this page",
+    "description": "Number of active rules",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "tabRules": {
+    "message": "Rules",
+    "description": "Rules tab"
+  },
+  "tabEditor": {
+    "message": "Editor",
+    "description": "Editor tab"
+  },
+  "tabSettings": {
+    "message": "Settings",
+    "description": "Settings tab"
+  },
+  "newRule": {
+    "message": "New Rule",
+    "description": "New rule button"
+  },
+  "reapply": {
+    "message": "Reapply",
+    "description": "Reapply rules button"
+  },
+  "noRules": {
+    "message": "No rules configured",
+    "description": "Empty state title"
+  },
+  "noRulesHint": {
+    "message": "Click \"New Rule\" to get started",
+    "description": "Empty state hint"
+  },
+  "ruleName": {
+    "message": "Rule Name",
+    "description": "Rule name field label"
+  },
+  "ruleNamePlaceholder": {
+    "message": "E.g.: Remove ads",
+    "description": "Rule name placeholder"
+  },
+  "description": {
+    "message": "Description",
+    "description": "Description field label"
+  },
+  "descriptionPlaceholder": {
+    "message": "Optional description",
+    "description": "Description placeholder"
+  },
+  "cssSelector": {
+    "message": "CSS Selector",
+    "description": "CSS selector field label"
+  },
+  "cssSelectorPlaceholder": {
+    "message": "E.g.: .ad-banner, #sidebar-ad",
+    "description": "CSS selector placeholder"
+  },
+  "testSelector": {
+    "message": "Test",
+    "description": "Test selector button"
+  },
+  "urlPattern": {
+    "message": "URL Pattern",
+    "description": "URL pattern field label"
+  },
+  "urlPatternPlaceholder": {
+    "message": "E.g.: *.example.com or * for all",
+    "description": "URL pattern placeholder"
+  },
+  "urlPatternHint": {
+    "message": "Use * as wildcard. Leave empty or * to apply on all sites.",
+    "description": "URL pattern help text"
+  },
+  "modifications": {
+    "message": "Modifications",
+    "description": "Modifications section title"
+  },
+  "cssStyles": {
+    "message": "CSS Styles",
+    "description": "CSS styles section"
+  },
+  "stylesHint": {
+    "message": "!important is added automatically. Don't type : or ;",
+    "description": "Hint for styles input"
+  },
+  "htmlAttributes": {
+    "message": "HTML Attributes",
+    "description": "HTML attributes section"
+  },
+  "addStyle": {
+    "message": "+ Add Style",
+    "description": "Add style button"
+  },
+  "addAttribute": {
+    "message": "+ Add Attribute",
+    "description": "Add attribute button"
+  },
+  "property": {
+    "message": "Property",
+    "description": "Property input placeholder"
+  },
+  "value": {
+    "message": "Value",
+    "description": "Value input placeholder"
+  },
+  "addClasses": {
+    "message": "Add Classes",
+    "description": "Add classes field label"
+  },
+  "removeClasses": {
+    "message": "Remove Classes",
+    "description": "Remove classes field label"
+  },
+  "classesPlaceholder": {
+    "message": "class1, class2",
+    "description": "Classes placeholder"
+  },
+  "ruleEnabled": {
+    "message": "Rule enabled",
+    "description": "Rule enabled checkbox"
+  },
+  "cancel": {
+    "message": "Cancel",
+    "description": "Cancel button"
+  },
+  "saveRule": {
+    "message": "Save Rule",
+    "description": "Save rule button"
+  },
+  "general": {
+    "message": "General",
+    "description": "General settings section"
+  },
+  "debugMode": {
+    "message": "Debug mode (console logs)",
+    "description": "Debug mode checkbox"
+  },
+  "data": {
+    "message": "Data",
+    "description": "Data settings section"
+  },
+  "exportRules": {
+    "message": "Export Rules",
+    "description": "Export button"
+  },
+  "importRules": {
+    "message": "Import Rules",
+    "description": "Import button"
+  },
+  "dangerZone": {
+    "message": "Danger Zone",
+    "description": "Danger zone title"
+  },
+  "clearAllRules": {
+    "message": "Clear All Rules",
+    "description": "Clear all button"
+  },
+  "about": {
+    "message": "About",
+    "description": "About section"
+  },
+  "aboutText": {
+    "message": "Element Modifier Pro allows you to modify HTML elements on any website. Your settings are synced across devices via your Google account.",
+    "description": "About description"
+  },
+  "storageUsage": {
+    "message": "Loading storage usage...",
+    "description": "Storage info placeholder"
+  },
+  "storage": {
+    "message": "Storage",
+    "description": "Storage label"
+  },
+  "edit": {
+    "message": "Edit",
+    "description": "Edit button tooltip"
+  },
+  "duplicate": {
+    "message": "Duplicate",
+    "description": "Duplicate button tooltip"
+  },
+  "delete": {
+    "message": "Delete",
+    "description": "Delete button tooltip"
+  },
+  "confirmDelete": {
+    "message": "Are you sure you want to delete this rule?",
+    "description": "Delete confirmation"
+  },
+  "confirmClearAll": {
+    "message": "Are you sure you want to delete ALL rules? This action cannot be undone.",
+    "description": "Clear all confirmation"
+  },
+  "confirmImport": {
+    "message": "Import $COUNT$ rule(s)? This will be added to existing rules.",
+    "description": "Import confirmation",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "importSuccess": {
+    "message": "$COUNT$ rule(s) imported successfully!",
+    "description": "Import success message",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "importError": {
+    "message": "Import error",
+    "description": "Import error prefix"
+  },
+  "invalidFileFormat": {
+    "message": "Invalid file format",
+    "description": "Invalid import file"
+  },
+  "selectorInvalid": {
+    "message": "Invalid selector",
+    "description": "Invalid selector error"
+  },
+  "selectorRequired": {
+    "message": "Enter a selector first",
+    "description": "Selector required message"
+  },
+  "cannotTestOnPage": {
+    "message": "Cannot test on this page",
+    "description": "Cannot test selector"
+  },
+  "testError": {
+    "message": "Error testing (extension not loaded)",
+    "description": "Test error message"
+  },
+  "elementsFound": {
+    "message": "$COUNT$ element(s) found",
+    "description": "Elements found message",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "requiredFields": {
+    "message": "Name and Selector are required!",
+    "description": "Required fields error"
+  },
+  "saveError": {
+    "message": "Error saving rule",
+    "description": "Save error prefix"
+  },
+  "copy": {
+    "message": "(copy)",
+    "description": "Copy suffix for duplicated rules"
+  }
+}

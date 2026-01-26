@@ -1,0 +1,294 @@
+{
+  "extName": {
+    "message": "Element Modifier Pro",
+    "description": "Nome da extensão"
+  },
+  "extDescription": {
+    "message": "Modifica atributos, estilos e propriedades de elementos HTML em qualquer site",
+    "description": "Descrição da extensão"
+  },
+  "headerTitle": {
+    "message": "Element Modifier Pro",
+    "description": "Título no cabeçalho do popup"
+  },
+  "version": {
+    "message": "v1.0.0",
+    "description": "Número da versão"
+  },
+  "loading": {
+    "message": "Carregando...",
+    "description": "Estado de carregamento"
+  },
+  "pageNotSupported": {
+    "message": "Página não suportada",
+    "description": "Quando a extensão não pode rodar na página atual"
+  },
+  "extensionNotLoaded": {
+    "message": "Extensão não carregada nesta página",
+    "description": "Quando o content script não foi injetado"
+  },
+  "rulesActive": {
+    "message": "$COUNT$ regra(s) ativa(s) nesta página",
+    "description": "Número de regras ativas",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "tabRules": {
+    "message": "Regras",
+    "description": "Aba de regras"
+  },
+  "tabEditor": {
+    "message": "Editor",
+    "description": "Aba do editor"
+  },
+  "tabSettings": {
+    "message": "Config",
+    "description": "Aba de configurações"
+  },
+  "newRule": {
+    "message": "Nova Regra",
+    "description": "Botão nova regra"
+  },
+  "reapply": {
+    "message": "Reaplicar",
+    "description": "Botão reaplicar regras"
+  },
+  "noRules": {
+    "message": "Nenhuma regra configurada",
+    "description": "Título do estado vazio"
+  },
+  "noRulesHint": {
+    "message": "Clique em \"Nova Regra\" para começar",
+    "description": "Dica do estado vazio"
+  },
+  "ruleName": {
+    "message": "Nome da Regra",
+    "description": "Rótulo do campo nome"
+  },
+  "ruleNamePlaceholder": {
+    "message": "Ex: Remover anúncios",
+    "description": "Placeholder do nome"
+  },
+  "description": {
+    "message": "Descrição",
+    "description": "Rótulo do campo descrição"
+  },
+  "descriptionPlaceholder": {
+    "message": "Descrição opcional",
+    "description": "Placeholder da descrição"
+  },
+  "cssSelector": {
+    "message": "Seletor CSS",
+    "description": "Rótulo do campo seletor"
+  },
+  "cssSelectorPlaceholder": {
+    "message": "Ex: .ad-banner, #sidebar-ad",
+    "description": "Placeholder do seletor"
+  },
+  "testSelector": {
+    "message": "Testar",
+    "description": "Botão testar seletor"
+  },
+  "urlPattern": {
+    "message": "Padrão de URL",
+    "description": "Rótulo do campo URL"
+  },
+  "urlPatternPlaceholder": {
+    "message": "Ex: *.exemplo.com ou * para todos",
+    "description": "Placeholder do padrão de URL"
+  },
+  "urlPatternHint": {
+    "message": "Use * como coringa. Deixe vazio ou * para aplicar em todos os sites.",
+    "description": "Texto de ajuda do padrão de URL"
+  },
+  "modifications": {
+    "message": "Modificações",
+    "description": "Título da seção de modificações"
+  },
+  "cssStyles": {
+    "message": "Estilos CSS",
+    "description": "Seção de estilos CSS"
+  },
+  "stylesHint": {
+    "message": "!important é adicionado automaticamente. Não digite : ou ;",
+    "description": "Dica para input de estilos"
+  },
+  "htmlAttributes": {
+    "message": "Atributos HTML",
+    "description": "Seção de atributos HTML"
+  },
+  "addStyle": {
+    "message": "+ Adicionar Estilo",
+    "description": "Botão adicionar estilo"
+  },
+  "addAttribute": {
+    "message": "+ Adicionar Atributo",
+    "description": "Botão adicionar atributo"
+  },
+  "property": {
+    "message": "Propriedade",
+    "description": "Placeholder do input propriedade"
+  },
+  "value": {
+    "message": "Valor",
+    "description": "Placeholder do input valor"
+  },
+  "addClasses": {
+    "message": "Adicionar Classes",
+    "description": "Rótulo do campo adicionar classes"
+  },
+  "removeClasses": {
+    "message": "Remover Classes",
+    "description": "Rótulo do campo remover classes"
+  },
+  "classesPlaceholder": {
+    "message": "classe1, classe2",
+    "description": "Placeholder de classes"
+  },
+  "ruleEnabled": {
+    "message": "Regra ativada",
+    "description": "Checkbox regra ativada"
+  },
+  "cancel": {
+    "message": "Cancelar",
+    "description": "Botão cancelar"
+  },
+  "saveRule": {
+    "message": "Salvar Regra",
+    "description": "Botão salvar regra"
+  },
+  "general": {
+    "message": "Geral",
+    "description": "Seção de configurações gerais"
+  },
+  "debugMode": {
+    "message": "Modo debug (logs no console)",
+    "description": "Checkbox modo debug"
+  },
+  "data": {
+    "message": "Dados",
+    "description": "Seção de configurações de dados"
+  },
+  "exportRules": {
+    "message": "Exportar Regras",
+    "description": "Botão exportar"
+  },
+  "importRules": {
+    "message": "Importar Regras",
+    "description": "Botão importar"
+  },
+  "dangerZone": {
+    "message": "Zona de Perigo",
+    "description": "Título zona de perigo"
+  },
+  "clearAllRules": {
+    "message": "Limpar Todas as Regras",
+    "description": "Botão limpar tudo"
+  },
+  "about": {
+    "message": "Sobre",
+    "description": "Seção sobre"
+  },
+  "aboutText": {
+    "message": "Element Modifier Pro permite modificar elementos HTML em qualquer site. Suas configurações são sincronizadas entre dispositivos via conta Google.",
+    "description": "Descrição sobre"
+  },
+  "storageUsage": {
+    "message": "Carregando uso do storage...",
+    "description": "Placeholder de info do storage"
+  },
+  "storage": {
+    "message": "Storage",
+    "description": "Rótulo storage"
+  },
+  "edit": {
+    "message": "Editar",
+    "description": "Tooltip do botão editar"
+  },
+  "duplicate": {
+    "message": "Duplicar",
+    "description": "Tooltip do botão duplicar"
+  },
+  "delete": {
+    "message": "Excluir",
+    "description": "Tooltip do botão excluir"
+  },
+  "confirmDelete": {
+    "message": "Tem certeza que deseja excluir esta regra?",
+    "description": "Confirmação de exclusão"
+  },
+  "confirmClearAll": {
+    "message": "Tem certeza que deseja excluir TODAS as regras? Esta ação não pode ser desfeita.",
+    "description": "Confirmação limpar tudo"
+  },
+  "confirmImport": {
+    "message": "Importar $COUNT$ regra(s)? Isso será adicionado às regras existentes.",
+    "description": "Confirmação de importação",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "importSuccess": {
+    "message": "$COUNT$ regra(s) importada(s) com sucesso!",
+    "description": "Mensagem de sucesso na importação",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "5"
+      }
+    }
+  },
+  "importError": {
+    "message": "Erro ao importar",
+    "description": "Prefixo de erro de importação"
+  },
+  "invalidFileFormat": {
+    "message": "Formato de arquivo inválido",
+    "description": "Arquivo de importação inválido"
+  },
+  "selectorInvalid": {
+    "message": "Seletor inválido",
+    "description": "Erro de seletor inválido"
+  },
+  "selectorRequired": {
+    "message": "Digite um seletor primeiro",
+    "description": "Mensagem seletor obrigatório"
+  },
+  "cannotTestOnPage": {
+    "message": "Não é possível testar nesta página",
+    "description": "Não pode testar seletor"
+  },
+  "testError": {
+    "message": "Erro ao testar (extensão não carregada)",
+    "description": "Mensagem de erro ao testar"
+  },
+  "elementsFound": {
+    "message": "$COUNT$ elemento(s) encontrado(s)",
+    "description": "Mensagem elementos encontrados",
+    "placeholders": {
+      "count": {
+        "content": "$1",
+        "example": "3"
+      }
+    }
+  },
+  "requiredFields": {
+    "message": "Nome e Seletor são obrigatórios!",
+    "description": "Erro de campos obrigatórios"
+  },
+  "saveError": {
+    "message": "Erro ao salvar regra",
+    "description": "Prefixo de erro ao salvar"
+  },
+  "copy": {
+    "message": "(cópia)",
+    "description": "Sufixo para regras duplicadas"
+  }
+}
