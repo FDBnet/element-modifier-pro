@@ -443,7 +443,26 @@
       log('Configurações alteradas:', changes);
 
       if (changes.rules) {
-        CONFIG.rules = changes.rules.newValue || [];
+        const oldRules = changes.rules.oldValue || [];
+        const newRules = changes.rules.newValue || [];
+        
+        // Detecta regras que foram modificadas (mesmo ID, mas conteúdo diferente)
+        const modifiedRuleIds = newRules
+          .filter(newRule => {
+            const oldRule = oldRules.find(r => r.id === newRule.id);
+            if (!oldRule) return false; // É nova, não modificada
+            // Compara se houve mudança
+            return JSON.stringify(oldRule) !== JSON.stringify(newRule);
+          })
+          .map(r => r.id);
+        
+        // Remove estilos das regras modificadas antes de reaplicar
+        if (modifiedRuleIds.length > 0) {
+          log('Regras modificadas detectadas:', modifiedRuleIds);
+          removeStylesFromRules(oldRules.filter(r => modifiedRuleIds.includes(r.id)));
+        }
+        
+        CONFIG.rules = newRules;
         reprocessAllElements();
       }
 
@@ -459,13 +478,85 @@
       }
     });
   }
+  
+  /**
+   * Remove estilos aplicados por regras específicas
+   */
+  function removeStylesFromRules(rules) {
+    for (const rule of rules) {
+      if (!rule || !rule.selector) continue;
+      
+      try {
+        const elements = findElements(rule.selector);
+        
+        elements.forEach(element => {
+          // Remove estilos que foram aplicados por esta regra
+          if (rule.styles && typeof rule.styles === 'object') {
+            for (const prop of Object.keys(rule.styles)) {
+              let cssProp = prop.trim();
+              if (cssProp.match(/[A-Z]/)) {
+                cssProp = cssProp.replace(/([A-Z])/g, '-$1').toLowerCase();
+              }
+              element.style.removeProperty(cssProp);
+              log(`Removido estilo: ${cssProp} de`, element);
+            }
+          }
+          
+          // Remove classes adicionadas
+          if (rule.addClass) {
+            const classes = Array.isArray(rule.addClass) ? rule.addClass : [rule.addClass];
+            classes.forEach(cls => {
+              if (cls && element.classList.contains(cls.trim())) {
+                element.classList.remove(cls.trim());
+              }
+            });
+          }
+          
+          // Restaura classes removidas (adiciona de volta)
+          if (rule.removeClass) {
+            const classes = Array.isArray(rule.removeClass) ? rule.removeClass : [rule.removeClass];
+            classes.forEach(cls => {
+              if (cls && !element.classList.contains(cls.trim())) {
+                element.classList.add(cls.trim());
+              }
+            });
+          }
+          
+          // Limpa a marcação de processamento para esta regra
+          const processed = processedMap.get(element);
+          if (processed) {
+            processed.delete(rule.id);
+          }
+        });
+      } catch (e) {
+        warn(`Erro ao remover estilos da regra "${rule.name}":`, e.message);
+      }
+    }
+  }
 
   function reprocessAllElements() {
     log('Reprocessando todos os elementos...');
     
-    // Não precisamos limpar o WeakMap manualmente, 
-    // apenas reprocessar todos os elementos novamente
-    // O WeakMap será recriado conforme necessário
+    // IMPORTANTE: Limpa todas as marcações de processamento
+    // Isso permite que os elementos sejam processados novamente
+    // O WeakMap será limpo implicitamente, mas precisamos garantir
+    // que os elementos sejam remarcados
+    
+    // Busca todos os elementos que podem ter sido modificados e limpa suas marcações
+    const rules = getApplicableRules();
+    for (const rule of rules) {
+      try {
+        const elements = findElements(rule.selector);
+        elements.forEach(el => {
+          const processed = processedMap.get(el);
+          if (processed) {
+            processed.delete(rule.id);
+          }
+        });
+      } catch (e) {
+        // Ignora erros de seletores inválidos
+      }
+    }
     
     const result = processElements();
     log(`Reprocessamento concluído: ${result.total} encontrados, ${result.modified} modificados`);
