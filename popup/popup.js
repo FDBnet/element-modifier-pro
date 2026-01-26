@@ -430,14 +430,27 @@
 
     try {
       if (editingRuleId) {
-        // Atualizar regra existente
+        // Atualizar regra existente - SUBSTITUI COMPLETAMENTE (não faz merge)
         const index = currentRules.findIndex(r => r.id === editingRuleId);
         if (index !== -1) {
+          // Mantém apenas id e createdAt da regra original
           currentRules[index] = {
-            ...currentRules[index],
-            ...ruleData,
+            id: currentRules[index].id,
+            createdAt: currentRules[index].createdAt,
+            // Novos dados (substitui tudo)
+            name: ruleData.name,
+            description: ruleData.description,
+            selector: ruleData.selector,
+            urlPattern: ruleData.urlPattern,
+            styles: ruleData.styles,           // Substitui completamente
+            attributes: ruleData.attributes,   // Substitui completamente
+            addClass: ruleData.addClass,       // Substitui completamente
+            removeClass: ruleData.removeClass, // Substitui completamente
+            enabled: ruleData.enabled,
             updatedAt: Date.now()
           };
+          
+          console.log('[Element Modifier Pro] Regra atualizada:', currentRules[index]);
         }
       } else {
         // Criar nova regra
@@ -448,6 +461,7 @@
           updatedAt: Date.now()
         };
         currentRules.push(newRule);
+        console.log('[Element Modifier Pro] Nova regra criada:', newRule);
       }
 
       await chrome.storage.sync.set({ rules: currentRules });
