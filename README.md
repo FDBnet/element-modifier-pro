@@ -38,18 +38,18 @@ The extension automatically detects your browser language.
 
 ## 📦 Installation
 
+### Chrome Web Store
+
+**[Install from Chrome Web Store](https://chromewebstore.google.com/detail/fdifpejgoddobdcpglbpepmdmbpombgd)** — recommended for most users.
+
 ### From Source (Developer Mode)
 
-1. Download or clone this repository
-2. Open Chrome and go to `chrome://extensions/`
-3. Enable **"Developer mode"** (top right corner)
-4. Click **"Load unpacked"**
+1. Clone or download this repository
+2. Open `chrome://extensions/` in Chrome
+3. Enable **Developer mode** (top right)
+4. Click **Load unpacked**
 5. Select the extension folder
-6. The extension icon will appear in your toolbar! 🎉
-
-### From Chrome Web Store
-
-*Coming soon*
+6. Done — the extension icon will appear in your toolbar 🎉
 
 ## 🚀 Quick Start
 
